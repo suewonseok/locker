@@ -1,0 +1,18 @@
+<div class="container">
+  <h4>파일선택</h4>
+  <%= form_tag import_csv_index_path, multipart: true do %>
+   <%= file_field_tag :file %>
+   <%= submit_tag "등록" %>
+  <% end %>
+  <h4>직접등록</h4>
+  <ul>
+  <%= form_tag csv_index_path do %>
+    <li>이름<input type = "text" name = "name"></li>
+    <li>학번<input type = "text" name = "stuN"></li>
+    <li>이메일<input type = "text" name = "email" placeholder="종정시 이메일"></li>
+    <li>비밀번호<input type = "password" name = "password" placeholder="초기 생년월일8자리"></li>
+    <li>비밀번호 확인<input type = "password" name = "password_confirmation" placeholder="비밀번호 확인"></li>
+    <li><input type="submit" value="완료"></li>
+  <% end %>
+  </ul>
+</div>
